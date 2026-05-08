@@ -117,7 +117,9 @@ def spf(header):
 		print('Received SPF:', spf_match[0], '- SPF did not pass - Flagged as suspicious!')
 	else:
 		print('SPF passed!')
-
+	if not spf_match:
+    print('No SPF record found')
+    return
 
 
 from_email(header)
